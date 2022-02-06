@@ -46,3 +46,28 @@ variable "user_name" {
   type        = string
   description = "user name"
 }
+
+variable "inbound_security_rules" {
+  default = [
+    {
+      destination_port_range = 22,
+      priority               = 1001,
+      name                   = "SSH"
+    },
+    {
+      destination_port_range = 8080,
+      priority               = 2000,
+      name                   = "Jenkins"
+    }
+    #    {
+    #      destination_port_range = 80,
+    #      priority = 1002,
+    #      name = "http"
+    #    },
+    #    {
+    #      destination_port_range = 443,
+    #      priority = 1003,
+    #      name = "https"
+    #    }
+  ]
+}

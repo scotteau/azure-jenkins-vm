@@ -1,2 +1,6 @@
 *.pem
 .terraform
+.terraform.lock.hcl
+ssh.sh
+*.tfstate
+*.tfstate.backup
